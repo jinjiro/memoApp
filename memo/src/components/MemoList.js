@@ -12,10 +12,12 @@ class MemoList extends React.Component {
           </View>
         </TouchableHighlight>
 
-        <View style={styles.memoListItem}>
-          <Text style={styles.memoTitle}>講座のアイテム</Text>
-          <Text style={styles.memoDate}>2019/5/19</Text>
-        </View>
+        <TouchableHighlight onPress={() => { this.props.navigation.navigate('Point'); }}>
+          <View style={styles.memoListItem}>
+            <Text style={styles.memoTitle}>講座のアイテム</Text>
+            <Text style={styles.memoDate}>2019/5/19</Text>
+          </View>
+        </TouchableHighlight>
 
         <View style={styles.memoListItem}>
           <Text style={styles.memoTitle}>講座のアイテム</Text>
