@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, View, Text, TouchableHighlight } from 'react-native';
+import { StyleSheet, View, Text, TouchableOpacity } from 'react-native';
 
 class PointSyokai extends React.Component {
   render() {
@@ -8,11 +8,11 @@ class PointSyokai extends React.Component {
         <View style={styles.pointHeader}>
           <Text style={styles.headerText}>ポイント</Text>
         </View>
-        <TouchableHighlight onPress={() => { this.props.navigation.navigate('PointMeisai'); }}>
+        <TouchableOpacity onPress={() => this.openModalPoint()} style={styles.buttonContainer}>
           <View style={styles.pointHeader}>
             <Text style={styles.meisaiButton}>ポイント明細・履歴</Text>
           </View>
-        </TouchableHighlight>
+        </TouchableOpacity>
       </View>
     );
   }
